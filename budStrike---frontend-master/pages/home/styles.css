@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 15fr 1fr;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow: hidden;
+}
+
+header {
+    background-color: #bd59d6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+}
+
+main {
+    
+}
+
+main .products {
+    width: 100vw;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation: products-animation 1s ease
+    
+}
+
+@keyframes products-animation {
+    from {
+        transform: translateY(50px);
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0px);
+
+    }
+}
+
+
+main .product {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    background: #bd59d60e;
+    transition:  .4s;
+    border-radius: 10px;
+    justify-self: center;
+    margin-top: 25px;
+}
+
+main .product:hover {
+    background: #bd59d64d;
+    
+}
+
+main .product #product-informations {
+    font-size: 12px;
+    text-align: center;
+}
+
+main .product #product-informations p {
+    font-size: 10px;
+}
+
+main .product #product-informations #price {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+main .products img {
+    max-width: 80%;
+}
+
+#price-and-stars {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+#price-and-stars #price {
+    color: rgb(0, 199, 0);
+    font-size: 18px !important;
+}
+
+#star{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#star img {
+    width: 15px;
+}
+
+
+
+main h2 {
+    font-size: 20px;
+    padding: 20px;
+    
+}
+main #banner img {
+    width: 100vw;
+}
+footer {
+    display:flex;
+    align-items: end;
+    padding-bottom: 20px;
+    justify-content: center;
+    font-size: 10px !important;
+}
