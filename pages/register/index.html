@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        Login
+        Cadastre-se
     </header>
     <main>
         <div class="login-container" >
@@ -20,14 +20,20 @@
                     <img src="../../assets/user.svg" alt="">
                     <input id="user-input" placeholder="usuário" type="text">
                 </div>
-                <div id="passwordContainer" class="user-password">
+                <div class="user-password" id="password">
                     <img src="../../assets/lock.svg" alt="">
-                    <input type="password" id="password-input" placeholder="senha" type="text">
+                    <input type="password" class="password" id="password-input" placeholder="senha" type="text">
                 </div>
-                <p  id="register-msg" >Não tem uma conta? <a href="../register/">Cadastre-se</a></p>
-
+                <div class="user-password" id="password-confirm">
+                  <img src="../../assets/lock.svg" alt="">
+                  <input type="password" class="password" id="password-input-confirm" placeholder="confirmar senha" type="text">
+              </div>
+              <div id="terms" >
+                <input type="checkbox" name="terms" id="">
+                <p>concordo com todos os <a href="../terms/">termos</a></p>
+              </div>
                 <div class="login-button" >
-                    <button type="submit" >Entrar</button>
+                    <button type="submit" >Cadastrar</button>
                 </div>
             </form>
 

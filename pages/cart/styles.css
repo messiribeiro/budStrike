@@ -13,13 +13,26 @@ body{
     font-style: normal;
 }
 header {
-    background-color: #bd59d6;
+    background-color: #5a2183;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     color: white;
 }
+
+header h1 a{
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    
+}
+
+header h1 {
+    display: flex;
+    
+}
+
 
 main {
     margin-top: 20px;
@@ -62,23 +75,43 @@ main #total {
 
 #product {
     width: 100%;
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
     background-color: rgba(0, 0, 0, 0.068);
     border-radius: 5px;
     padding: 10px;
     align-items: center;
+    justify-content: space-between;
 }
 
 #product p {
     font-size: 12px;
 }
 
-#product img {
-    width: 25px;
-    
+#product svg {
+    justify-self: flex-end;
+    cursor: pointer;
+    transition: width .3s ease-in-out;
 }
 
+#product svg:hover {
+    width: 30px;
+}
+
+#product img {
+    width: 25px;
+    height: 25px;
+    
+}
+#informations #price {
+    color: rgba(11, 196, 11, 0.699);
+    font-weight: 500;
+}
+#img-and-title {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
 
 footer {
     display:flex;

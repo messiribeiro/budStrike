@@ -5,118 +5,97 @@
 }
 body {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-rows: 1fr 15fr 1fr;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    overflow: hidden;
+}
+header img {
+    width: 100vw;
+}
+header #options {
+    width: 100%;
+    height: 23%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
 }
 
-header {
-    background-color: #bd59d6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    color: white;
+header #options h1 {
+    font-size: 1.8em;
 }
+
 
 main {
-    
-}
-
-main .products {
-    width: 100vw;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    animation: products-animation 1s ease
-    
-}
-
-@keyframes products-animation {
-    from {
-        transform: translateY(50px);
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-        transform: translateY(0px);
-
-    }
-}
-
-
-main .product {
-    width: 40vw;
     display: flex;
     flex-direction: column;
-    align-items: center;   
-    background: #bd59d60e;
-    transition:  .4s;
-    border-radius: 10px;
-    justify-self: center;
-    margin-top: 25px;
-}
-
-main .product:hover {
-    background: #bd59d64d;
-    
-}
-
-main .product #product-informations {
-    font-size: 12px;
-    text-align: center;
-}
-
-main .product #product-informations p {
-    font-size: 10px;
-}
-
-main .product #product-informations #price {
-    font-size: 20px;
-    font-weight: 700;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    
-}
-
-main .products img {
-    max-width: 80%;
-}
-
-#price-and-stars {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-#price-and-stars #price {
-    color: rgb(0, 199, 0);
-    font-size: 18px !important;
-}
-
-#star{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-#star img {
-    width: 15px;
-}
-
-
-
-main h2 {
-    font-size: 20px;
-    padding: 20px;
-    
-}
-main #banner img {
+    padding: 5%;
     width: 100vw;
 }
+
+#products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6%;
+    justify-content: center;
+    align-items: center;
+}
+
+#product{
+    width: 160px;
+    height: 190px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 5%;
+    justify-self: center;
+    margin-top: 13%;
+}
+
+#product #img-and-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+#product #img-and-title p{
+    font-size: .8em
+}
+
+#product #img-and-title img {
+    width: 70%;
+    align-self: center;
+}
+
+#product #stars-and-price {
+    display: flex;
+    gap: 10%;
+    margin-top: 10%;
+}
+
+#product #stars-and-price #stars p {
+    font-size: .6em;
+    margin-left: 4px;
+}
+
+#product #stars-and-price #price {
+    font-size: 1em;
+    color: #00C767;
+    font-weight: 800;
+    align-self: center;
+}
+
+#stars {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
 footer {
     display:flex;
     align-items: end;

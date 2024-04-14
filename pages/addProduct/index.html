@@ -10,24 +10,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        Login
-    </header>
     <main>
+        <h2>Adicione um produto</h2>
         <div class="login-container" >
             <form class="login-form" action="">
                 <div class="user-container" >
-                    <img src="../../assets/user.svg" alt="">
-                    <input id="user-input" placeholder="usuário" type="text">
+                    <input id="user-input" placeholder="Nome" type="text">
                 </div>
-                <div id="passwordContainer" class="user-password">
-                    <img src="../../assets/lock.svg" alt="">
-                    <input type="password" id="password-input" placeholder="senha" type="text">
+                <div class="user-password" id="password">
+                    <input type="password" class="password" id="password-input" placeholder="Descrição" type="text">
                 </div>
-                <p  id="register-msg" >Não tem uma conta? <a href="../register/">Cadastre-se</a></p>
-
+                <div class="user-password" id="password-confirm">
+                  <input  class="password" id="password-input-confirm" placeholder="Preço" type="number">
+                </div>
+                <div class="user-password" id="password-confirm">
+                    <input type="text" class="password" id="password-input-confirm" placeholder="Link da imagem" type="text">
+                  </div>
+              
                 <div class="login-button" >
-                    <button type="submit" >Entrar</button>
+                    <button type="submit" >Adicionar</button>
                 </div>
             </form>
 

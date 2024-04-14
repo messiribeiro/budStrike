@@ -3,15 +3,53 @@ const userInputContainer = document.querySelector(".user-container")
 
 const form = document.querySelector(".login-form")
 const user = document.querySelector("#user-input")
-const password = document.querySelector("#password-input");
+const passwordInput = document.querySelector("#password-input");
+const passwordContainer = document.querySelector('#passwordContainer')
+
+
+userInput.addEventListener('focus', () => {
+  userInputContainer.classList.remove('alert')
+  passwordContainer.classList.remove('alert')
+
+
+  userInputContainer.classList.add('user-container-selected')
+})
+
+userInput.addEventListener('blur', () => {
+  userInputContainer.classList.remove('user-container-selected')
+})
+
+
+
+passwordInput.addEventListener('focus', () => {
+  userInputContainer.classList.remove('alert')
+  passwordContainer.classList.remove('alert')
+
+
+
+  passwordContainer.classList.add('user-password-selected')
+})
+passwordInput.addEventListener('blur', () => {
+  passwordContainer.classList.remove('user-password-selected')
+})
+
+
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
+  e.preventDefault()
 
-    if(user.value != ""  && password.value != ""){
-        window.location.href = "../home"
-        
-    }
+  if (user.value != "" && passwordInput.value != "") {
+    window.location.href = "../home"
 
-    
+  } else if (user.value == "") {
+    passwordContainer.classList.remove('alert')
+
+    userInputContainer.classList.add('alert')
+  } else {
+    userInputContainer.classList.remove('alert')
+
+    passwordContainer.classList.add('alert')
+  }
+
+
 })
